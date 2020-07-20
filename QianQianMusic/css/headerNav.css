@@ -1,0 +1,75 @@
+/* 复位操作 */
+* {
+	padding: 0;
+	margin: 0;
+}
+
+ul {
+	list-style: none;
+}
+
+a {
+	text-decoration: none;
+}
+
+/* 公共样式 */
+.w {
+	width: 1200px;
+	margin: 0 auto;
+}
+
+/* top区域样式 */
+/* 如果是div,则直接写类名即可，其它的标签用标签名.类名比较好 */
+.top {
+	height: 95px;
+	/* background-color: aqua; 背景颜色用来调试使用，写好了删除即可*/
+	font-size: 0;/* 消除a和ul之间的缝隙 */
+}
+
+.top>a.logo {
+	display: inline-block;
+	/* background-color: #008000; */
+	vertical-align: middle;/* 垂直对齐，与ul都需要加，保证a和ul垂直对齐*/
+	/* font-size: 0; 消除底线与基线的距离，全部代码写好了之后检查一下是否有冗余的代码，该代码继承父亲即可，所以可删除*/
+	margin-right: 70px;
+}
+
+.top>a.logo>img {
+	width: 123px;
+	/* 只设置宽度即可，高度自动计算，则会保证显示的图片不失真*/
+}
+
+.top>ul { /* > 找儿子 */
+	display: inline-block;
+	/* background-color: #0000FF; */
+	vertical-align: middle;
+	/* font-size: 0;  消除li间的缝隙 ，继承父亲即可 */
+}
+
+.top>ul>li {
+	display: inline-block;
+}
+
+.top>ul>li>a {
+	/* 高度确定的时候，可以设置行高=高度实现文本垂直居中；高度不定的时候，可以只用padding去挤内容 */
+	display: inline-block;
+	height: 40px;
+	/* background-color: yellow; */
+	padding: 0 17px;
+	font-size: 16px;
+	color: #858585;
+	line-height: 40px;/* 行高=高度，则单行文本垂直居中*/
+}
+
+.top>ul>li>a:hover {
+	color: black;
+}
+
+.help {
+	height: 100%;/* 保证弹性 */
+	display: inline-block; /* 必须要改成行级，保证和其它元素qq在一行，便于和其它元素对齐 */
+	vertical-align: middle;	/* 使a、ul在top中垂直对齐*/
+	/* 下面两行代码调试使用 */
+	/* width: 5px;
+	background-color: red; */
+}
