@@ -29,7 +29,7 @@ a {
 .top>a.logo {
 	display: inline-block;
 	/* background-color: #008000; */
-	vertical-align: middle;/* 垂直对齐，与ul都需要加，保证a和ul垂直对齐*/
+	vertical-align: middle;/* 行级元素垂直对齐，与ul都需要加，保证a和ul垂直对齐*/
 	/* font-size: 0; 消除底线与基线的距离，全部代码写好了之后检查一下是否有冗余的代码，该代码继承父亲即可，所以可删除*/
 	margin-right: 70px;
 }
@@ -39,7 +39,7 @@ a {
 	/* 只设置宽度即可，高度自动计算，则会保证显示的图片不失真*/
 }
 
-.top>ul { /* > 找儿子 */
+.top>ul { /* >符号 找儿子 */
 	display: inline-block;
 	/* background-color: #0000FF; */
 	vertical-align: middle;
@@ -67,7 +67,7 @@ a {
 
 .help {
 	height: 100%;/* 保证弹性 */
-	display: inline-block; /* 必须要改成行级，保证和其它元素qq在一行，便于和其它元素对齐 */
+	display: inline-block; /* 必须要改成行级，保证和其它元素都在一行，便于和其它元素对齐 */
 	vertical-align: middle;	/* 使a、ul在top中垂直对齐*/
 	/* 下面两行代码调试使用 */
 	/* width: 5px;
