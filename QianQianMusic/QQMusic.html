@@ -1,0 +1,134 @@
+<!DOCTYPE html>
+<html>
+	<head>
+		<meta charset="utf-8">
+		<title></title>
+		<link rel="stylesheet" type="text/css" href="css/headerNav.css"/>
+		<link rel="stylesheet" type="text/css" href="css/index.css"/>
+	</head>
+	<body>
+		<!-- 做右侧固定栏使用 -->
+		<div class="aside"></div>
+		
+		<!-- 头部导航栏 -->
+		<div class="w top">
+			<!-- 为了使logo和ul垂直对齐，添加的额外div,无任何含义 -->
+			<div class="help"></div>
+			<a href="#" class="logo">
+				<img src="img/logo.png" />
+			</a>
+			<ul>
+				<li><a href="#">发现音乐</a></li>
+				<li><a href="#">随心听</a></li>
+				<li><a href="#">客户端</a></li>
+				<li><a href="#">VIP</a></li>
+				<li><a href="#">音乐人</a></li>
+				<li><a href="#">演出</a></li>
+			</ul>
+		</div>
+		
+		<!-- 热门歌手区域 -->
+		<div class="w hot-singer"> <!-- 最好用连字符连接多个英文字母-->
+		<div class="title">
+			<h2>热门歌手</h2>
+			<a href="">更多</a>
+		</div>
+			<ul>
+			    <!-- li*6>a>img+span可以快速生成结构 -->	
+			    <li>
+					<a href="">
+						<img src="img/figure.jpg" >
+						<p>龙梅子</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/figure.jpg" >
+						<p>龙梅子</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/figure.jpg" >
+						<p>龙梅子</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/figure.jpg" >
+						<p>龙梅子</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/figure.jpg" >
+						<p>龙梅子</p>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<img src="img/figure.jpg" >
+						<p>龙梅子</p>
+					</a>
+				</li>
+			</ul>
+		</div>
+	
+	    <!-- 精选mv区域 -->
+		<div class="w mv">
+			<div class="title">
+				<h2>精选MV</h2>
+				<a href="">更多</a>
+			</div>
+			<ul>
+				<li>
+					<a href="">
+						<!-- 此处的div破环了结构，目的是便于圆圈绝对定位作为参照物 -->
+						<div class="img-wrapper">
+						   <img src="img/MV.jpg" >
+						   <!-- 下面的circle做悬浮半透明圆圈用，circle2做最右端的半圆用 -->
+						   <span class="circle"></span>
+						   <span class="circle2"></span>
+						</div>
+						<h5>Home</h5>
+						<h6>蔡徐坤</h6>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="img-wrapper">
+						   <img src="img/MV.jpg" >
+						   <span class="circle"></span>
+						   <span class="circle2"></span>
+						</div>
+						<h5>Home</h5>
+						<h6>蔡徐坤</h6>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="img-wrapper">
+						   <img src="img/MV.jpg" >
+						   <span class="circle"></span>
+						   <span class="circle2"></span>
+						</div>
+						<h5>Home</h5>
+						<h6>蔡徐坤</h6>
+					</a>
+				</li>
+				<li>
+					<a href="">
+						<div class="img-wrapper">
+						   <img src="img/MV.jpg" >
+						   <span class="circle"></span>
+						   <span class="circle2"></span>
+						</div>
+						<h5>Home</h5>
+						<h6>蔡徐坤</h6>
+					</a>
+				</li>
+			</ul>
+		</div>
+	
+	</body>
+</html>

@@ -1,0 +1,129 @@
+/* 右侧固定边栏 */
+.aside {
+	/* 重要的样式放在前面，相关的样式放在一起，不太重要的放在后面 */
+	position: fixed;
+	height: 300px;
+	width: 100px;
+	right: 0;
+	bottom: 200px;
+	background-color: bisque;
+}
+/* 热门歌手区域 */
+.hot-singer {
+}
+.title {
+	margin-top: 40px;
+	margin-bottom: 35px;
+}
+.title>h2 {
+	font-weight: 400;
+	display: inline-block;
+}
+.title>a {
+	font-size: 14px;
+	color: #999999;
+	padding: 14px;
+}
+.hot-singer>ul {
+	font-size: 0;
+}
+.hot-singer>ul>li {
+	display: inline-block;
+	box-sizing: border-box;
+	width: 16.666666%;
+	padding: 0 39px;
+	/* background-color: aqua; */
+}
+.hot-singer>ul>li>a {
+	/* 只有它自己，没有兄弟，并且需要流体特性，还能避免基线问题，则用block最好 */
+	display: block; 
+	/* 测试使用 */
+	/* height: 200px; */
+	/* background-color: antiquewhite; */
+}
+.hot-singer>ul>li>a>img {
+    width: 100%;
+	/* 图片是正方形，高度自动相同 */
+	border-radius: 50%;
+}
+.hot-singer>ul>li>a>p {
+	/* 若使用span,不用p,则需要在a里加text-align */
+	color: #333;
+	font-size: 14px;
+	text-align: center;/* 仅对盒子内部的行级元素有效 */
+	margin-top: 15px;
+}
+
+/* 精选mv区域 */
+.mv {
+	overflow: hidden;
+	/* 高度先设置便于测试用，后面的内容一填充，则高度自动就有了，所以前面不需要设置高度 */
+	/* height: 200px; */
+	/* background-color: red; */
+	 
+}
+.mv>ul {
+	/* 最重要（margin-right) */
+	margin-right: -25px; 
+	font-size: 0;
+	/* height: 150px; */
+	/* background-color: aqua; */
+}
+.mv>ul>li {
+	display: inline-block;
+	/* 将li设置成border-box,则缝隙间不会有手（链接） */
+	box-sizing: border-box;
+	width: 25%;
+	padding-right: 25px;
+	/* background-color: yellowgreen; */
+	/* height: 150px; */
+}
+.mv>ul>li>a {
+	/* 重要 */
+	display: block;
+	overflow: hidden;
+	/* background-color: green; */
+	/* height: 150px; */
+}
+.mv>ul>li>a>.img-wrapper {
+	position: relative; /* 定位圆圈的参照物 */
+}
+.mv>ul>li>a>.img-wrapper>img {
+	width: 100%;
+}
+/* circle和circle2公共代码 */
+.mv>ul>li>a>.img-wrapper>span { 
+	position:absolute ;
+	top: 50%;
+	width: 54px;
+	height: 54px;
+	margin-left: -27px;
+	margin-top: -27px;
+	border-radius: 50%;
+}
+.mv>ul>li>a>.img-wrapper>span.circle {
+	display: none; /* 不显示 */
+	left: 50%;
+	background-color: rgba(0,0,0,0.3);/* 设置半透明效果 */
+}
+.mv>ul>li>a>.img-wrapper>span.circle2 {
+	left: 100%;
+	background-color: white;
+}
+/* 悬浮效果：半透明圆圈 */
+.mv>ul>li>a:hover>.img-wrapper>span.circle {
+	display: block;
+}
+.mv>ul>li>a>h5 {
+	font-size: 14px;
+	color: #333333;
+	text-align: center;
+	margin-top: 15px;
+}
+.mv>ul>li>a>h6 {
+	font-size: 14px;
+	color: #999;
+	text-align: center;
+	margin-top: 10px;
+	letter-spacing: 2px;
+}

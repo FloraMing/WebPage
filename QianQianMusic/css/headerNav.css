@@ -63,6 +63,9 @@ a {
 
 .top>ul>li>a:hover {
 	color: black;
+	position: relative;
+	left: 2px;
+	top: 2px;
 }
 
 .help {
